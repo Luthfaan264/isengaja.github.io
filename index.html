@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Wesite | Vanilla Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Luthfan</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Web Designer</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ea eius cum nesciunt, beatae vero praesentium soluta mollitia sed recusandae suscipit ullam sapiente! Vero deserunt possimus qui, nihil iusto saepe!. Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Magni sit placeat quo aliquid, quidem nam ad incidunt iusto voluptatum maxime distinctio corrupti odio inventore velit. Dignissimos praesentium consectetur commodi porro!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum distinctio eos velit dolorum ducimus consequuntur illum necessitatibus corrupti sint fugiat quasi possimus modi doloribus nemo, dolore natus perspiciatis quod. Dolores?. 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quibusdam dolore dignissimos quidem fugiat officiis adipisci totam asperiores vero repellendus eaque expedita neque accusamus quasi, minus placeat, nostrum saepe a.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet rerum quis optio aliquid, ab officia, dolorem minima dolorum distinctio facilis pariatur nulla sequi odit modi cupiditate accusamus ad aliquam numquam!. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto magni corrupti, non officia commodi error, architecto incidunt ducimus minima nostrum fuga labore, ut sapiente optio? Aliquid provident sequi totam quia.
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, possimus? Repudiandae excepturi velit maiores beatae itaque nemo fuga sequi veritatis iste tenetur earum dignissimos eos libero, repellendus neque adipisci nesciunt.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ab quaerat consectetur nulla dolorum magnam labore exercitationem sint fugiat. Quo, fuga? Eos ea aut ipsam, doloribus neque ex earum. Mollitia?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam similique nostrum obcaecati consectetur iusto quibusdam, commodi, voluptatem provident earum incidunt explicabo harum velit reiciendis est pariatur atque quod rerum?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni nam aut quis temporibus nostrum, rem officia corporis expedita non dolor mollitia quod, molestias neque voluptas doloremque! Quasi quaerat adipisci architecto!
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorem fuga corrupti minus, quas provident eum non, natus ea, error consequatur delectus aspernatur dolore maiores id quaerat facere? Consectetur, eligendi!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus fugit consectetur modi voluptas? Earum officia minus neque sunt laborum dolorum doloremque excepturi, aut in laudantium, molestias dolorem minima tempora quos.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem asperiores rerum enim nobis, dolore qui! A obcaecati dolore ipsa omnis rem ex voluptates sunt accusantium voluptatum, molestias, culpa modi nesciunt.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga ut velit consequuntur exercitationem inventore reiciendis ipsa eius unde harum totam odit dolorem a, porro recusandae vitae repudiandae nulla deserunt. Atque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magni numquam maiores voluptate, suscipit, inventore nemo laudantium facere facilis at quibusdam consequuntur? Error deleniti eius nobis molestiae aut quidem corporis!
+
+        </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.25 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
